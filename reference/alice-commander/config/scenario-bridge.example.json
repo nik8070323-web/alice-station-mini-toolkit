@@ -1,0 +1,10 @@
+{
+  "enabled": false,
+  "entity_id": "media_player.YOUR_MINI_ENTITY",
+  "scenario_name": "Компьютерный режим",
+  "instance": "text_action",
+  "value": "ничего не делай",
+  "command_id": "rgb.rainbow",
+  "expanded": false,
+  "wake_enabled": false
+}

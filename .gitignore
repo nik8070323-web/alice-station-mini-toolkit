@@ -1,0 +1,13 @@
+# No local credentials, backups or device data
+.env
+*.env
+.secrets/
+data/
+backups/
+.storage/
+*.db*
+*.log*
+__pycache__/
+*.pyc
+.venv/
+config/phone.json

@@ -1,0 +1,26 @@
+[Unit]
+Description=Alice Commander narrow Yandex scenario bridge
+After=alice-commander.service
+PartOf=alice-commander.service
+ConditionPathExists=!%h/station-mini-root/alice-commander/data/voice/disabled
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+WorkingDirectory=%h/station-mini-root/alice-commander
+# Activate socket-started Docker and start only the existing HA container.
+# Docker retains responsibility for container crash recovery.
+ExecStartPre=/usr/bin/docker --host unix:///run/docker.sock start alice-commander-ha
+TimeoutStartSec=60
+ExecStart=/usr/bin/python3 -m voice.scenario_bridge
+Restart=on-failure
+RestartSec=15
+UMask=0077
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=%h/station-mini-root/alice-commander/data/voice
+RestrictAddressFamilies=AF_UNIX AF_INET
+
+[Install]
+WantedBy=alice-commander.service

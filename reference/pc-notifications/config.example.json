@@ -1,0 +1,29 @@
+{
+  "station_url": "http://192.168.1.123:8099",
+  "listen_host": "127.0.0.1",
+  "listen_port": 8877,
+  "notifications_enabled": true,
+  "effects_enabled": true,
+  "gestures_enabled": false,
+  "gesture_calibrated": false,
+  "gesture": {
+    "device": "STM VL53L0 proximity sensor",
+    "abs_event_type": 3,
+    "abs_distance_code": 25,
+    "near_max_mm": null,
+    "far_min_mm": null,
+    "debounce_events": 2,
+    "short_max_ms": 650,
+    "double_gap_ms": 500,
+    "long_hold_ms": 1400,
+    "event_timeout_ms": 750
+  },
+  "palette": "violet",
+  "rate_limit_seconds": 1.5,
+  "dedup_seconds": 2.5,
+  "queue_size": 24,
+  "cpu_monitor_enabled": true,
+  "cpu_threshold_percent": 90,
+  "cpu_check_interval_seconds": 30,
+  "cpu_alert_cooldown_seconds": 300
+}

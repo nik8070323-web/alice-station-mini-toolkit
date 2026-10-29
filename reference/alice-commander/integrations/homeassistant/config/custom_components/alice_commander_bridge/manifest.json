@@ -1,0 +1,1 @@
+{"domain":"alice_commander_bridge","name":"Alice Commander Scenario Bridge","version":"1.0.0","documentation":"https://github.com/AlexxIT/YandexStation#получение-команд-от-станции","dependencies":["yandex_station"],"requirements":[],"codeowners":[],"iot_class":"local_push"}

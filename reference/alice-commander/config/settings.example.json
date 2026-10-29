@@ -1,0 +1,10 @@
+{
+  "project": "/home/YOUR_USER/station-mini-root/alice-commander",
+  "allowed_directories": [
+    "/home/YOUR_USER/station-mini-root/alice-commander"
+  ],
+  "test_profile": "commander-selftest",
+  "station_url": "http://192.168.1.123:8099",
+  "dashboard": "http://127.0.0.1:8878",
+  "study_materials": "https://docs.python.org/3/"
+}

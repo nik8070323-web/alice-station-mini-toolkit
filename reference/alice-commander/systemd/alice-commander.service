@@ -1,0 +1,19 @@
+[Unit]
+Description=Alice Commander local desktop agent
+After=graphical-session.target alice-rgb-agent.service
+PartOf=graphical-session.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+WorkingDirectory=%h/station-mini-root/alice-commander
+ExecStartPre=/usr/bin/python3 %h/station-mini-root/alice-commander/scripts/session_ready.py
+ExecStart=/usr/bin/python3 -m agent.server
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=true
+
+[Install]
+WantedBy=graphical-session.target

@@ -1,0 +1,15 @@
+homeassistant:
+  name: Alice Commander Bridge
+  time_zone: Europe/Moscow
+  country: RU
+  unit_system: metric
+http:
+  server_host: 0.0.0.0  # container only; host publishing must stay loopback
+  server_port: 8123
+frontend:
+config:
+api:
+websocket_api:
+yandex_station:
+  cloud_updates: true
+alice_commander_bridge:
